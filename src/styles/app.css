@@ -1,0 +1,99 @@
+body{
+    background-image:linear-gradient(122deg, #22caa0, #0094db);
+    font-family:sans-serif;
+    height:auto;
+    /* width:100%; */
+    text-align:center;
+}
+
+h1{
+	display:inline-block;
+	position:relative;
+	text-decoration: underline;
+	border:2px solid black;
+	color:white;
+	background-color:black;
+	border-radius:10px;
+	width:auto;
+	padding:2px 5px 2px 5px;
+}
+
+div.game{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:space-around;
+    padding:0 20px 0 20px;
+    margin:auto;
+    width:600px;
+    overflow:hidden;
+	height:auto;
+    /* border:1px solid black; */
+}
+
+.casino{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.game>.table>img{
+        display:block;
+        transform:rotate(-20deg);
+
+}
+
+.table{
+    height:180px;
+    width:auto;
+    display:flex;
+	flex-wrap:wrap;
+	align-content:stretch;
+    /* align-items:center; */
+    flex-direction:row;
+    position:relative;
+    /* border:1px solid black; */
+}
+
+#player{
+    margin:10px;
+}
+
+img{
+    width:90px;
+    height:160px;
+}
+
+button{
+	height:40px;
+	width:auto;
+}
+
+#money{
+	display:inline-block;
+	width:auto;
+}
+
+.display{
+    display:flex;
+    list-style-type:none;
+    justify-content:space-around;
+    text-align:center;
+    width:auto;
+    text-align:center;
+    font-size:17px;
+	font-weight:bold;
+}
+
+.button-container{
+    display:flex;
+    align-items:center;
+	/* border:none; */
+	justify-content:space-around;
+}
+
+#hit-stand{
+    display:flex;
+    align-items:center;
+	/* border:none; */
+}	
