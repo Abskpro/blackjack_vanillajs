@@ -20,6 +20,7 @@ var hitstand = {
       RandnumStorage.userTotalCardValue,
       RandnumStorage.dealerTotalCardValue
     );
+      console.log(init,RandnumStorage.dealerTotalCardValue)
     init.make_move();
   }
 };

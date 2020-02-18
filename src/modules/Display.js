@@ -46,8 +46,10 @@ var displayCards = {
 function bet(e){
    var chip_Val = parseInt(e.target.value);
    console.log(typeof chip_Val);
-   domEvents.bet_value.innerHTML = parseInt(domEvents.bet_value.innerHTML) + chip_Val;
-    domEvents.balance.innerHTML = domEvents.balance.innerHTML - domEvents.bet_value.innerHTML;
+    RandnumStorage.bet_value = chip_Val + RandnumStorage.bet_value;
+    RandnumStorage.playerBalance = RandnumStorage.playerBalance - chip_Val;
+    document.getElementById("balance").innerHTML = RandnumStorage.playerBalance;
+   document.getElementById("bet-value").innerText= RandnumStorage.bet_value;
    e.stopPropagation;
  };
 
@@ -57,6 +59,11 @@ function reset(){
 }
 
 function next(){
-
+    console.log("fasd");
+    RandnumStorage.dealerHit=[];
+    RandnumStorage.userHit=[];
+    RandnumStorage.dealerHit.length=0;
+    RandnumStorage.userHit.length=0;
+    RandnumStorage.currRnd= [];
 }
 

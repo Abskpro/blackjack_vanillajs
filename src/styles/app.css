@@ -1,8 +1,7 @@
 body{
     background-image:linear-gradient(122deg, #22caa0, #0094db);
     font-family:sans-serif;
-    height:auto;
-    /* width:100%; */
+    width:100%;
     text-align:center;
 }
 
@@ -18,24 +17,40 @@ h1{
 	padding:2px 5px 2px 5px;
 }
 
-div.game{
+
+.casino{
+    height:500px;
+    margin:0;
+    padding:0;
+    width:100%;
+    display:flex;
+	flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.grid-disp{
+    width:100px;
+    margin:0;
+    display:grid;
+    grid-template-rows:auto auto;
+    grid-gap:10px;
+}
+
+.game{
+    height:initial;
+    margin:0;
+    width:600px;
+    padding:0 20px 0 20px;
     display:flex;
     align-items:center;
     flex-direction:column;
     justify-content:space-around;
-    padding:0 20px 0 20px;
+    height:500px;
     margin:auto;
-    width:600px;
     overflow:hidden;
-	height:auto;
-    /* border:1px solid black; */
+    border:1px solid black;
 }
 
-.casino{
-    display:flex;
-    align-items:center;
-    justify-content:space-around;
-}
 
 .game>.table>img{
         display:block;
@@ -44,15 +59,13 @@ div.game{
 }
 
 .table{
-    height:180px;
+    height:auto;
     width:auto;
     display:flex;
 	flex-wrap:wrap;
 	align-content:stretch;
-    /* align-items:center; */
     flex-direction:row;
     position:relative;
-    /* border:1px solid black; */
 }
 
 #player{
@@ -88,12 +101,11 @@ button{
 .button-container{
     display:flex;
     align-items:center;
-	/* border:none; */
 	justify-content:space-around;
 }
 
 #hit-stand{
     display:flex;
-    align-items:center;
-	/* border:none; */
+    flex-direction:row;
+    justify-content:center;
 }	

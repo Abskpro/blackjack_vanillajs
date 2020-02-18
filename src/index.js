@@ -1,6 +1,7 @@
 ////******** event listeners******************////////
 /////////////////////////////////////////////////////
 (() => {
+
     document.querySelector(".next").style.visibility = "hidden";
   document.querySelector(".bet").addEventListener(
     "click",
@@ -16,6 +17,5 @@
     .querySelector("#hit-stand")
     .addEventListener("click", hitstand.eval, false);
     document.querySelector(".reset").addEventListener("click",reset,false);
-    // document.getElementById("next-game").addEventListener("click",next,false);
+    document.getElementById("next-game").addEventListener("click",next,false);
 })();
-

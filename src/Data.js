@@ -5,6 +5,8 @@ var RandnumStorage = {
   currRnd: [],
   userTotalCardValue: 0,
   dealerTotalCardValue: 0,
+  playerBalance:100000,
+  bet_value:0
 };
 
 
@@ -18,7 +20,7 @@ var functionState = {
 
 var domEvents = {
   bet_value: document.getElementById("bet-value"),
-    balance:document.getElementById("balance"),
+  balance:document.getElementById("balance"),
   dealerCard: document.getElementById("dealer"),
   playerCard: document.getElementById("player"),
   image : document.createElement("IMG")
