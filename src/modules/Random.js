@@ -62,15 +62,9 @@ function randCalc(num){
 
 
 function assignCards(toggle){
-    if (toggle === 0) {
-        console.log("toogle is "+toggle);
       RandnumStorage.userTotalCardValue = (RandnumStorage.userHit).reduce(sumFunc,0);
       RandnumStorage.dealerTotalCardValue = RandnumStorage.dealerHit.reduce(sumFunc,0);
-    } else if (toggle === 1) {
-      console.log(2);
-    } else {
-      console.log("2");
-    }
+
     function sumFunc(total, num) {
       return total + num;
     }

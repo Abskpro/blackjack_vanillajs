@@ -1,24 +1,36 @@
+function Card_Process(curr){
+    this.curr = curr;
+    this.image = document.createElement("IMG");
+    this.curr_toInt = parseInt(curr);
+    this.card = (this.curr_toInt*10)+ RandnumStorage.initRand[this.curr_toInt];
+    this.img = `./src/assets/PNG/${this.card}.png`;
+
+
+    this.userHit = function(){
+        this.image.setAttribute("src",this.img);
+        domEvents.playerCard.appendChild(this.image);
+    };
+    this.dealerHit = function(){
+        this.image.setAttribute("src",this.img);
+        domEvents.dealerCard.appendChild(this.image);
+    };
+}
+
+
 var displayCards = {
     init:() =>{
         console.log("displaycard reached");
        RandnumStorage.userHit.map((curr)=>{
-            let image = document.createElement("IMG");
-            let curr_toInt = parseInt(curr);
-            let card = (curr_toInt*10)+ RandnumStorage.initRand[curr_toInt];
-           let img =`./src/assets/PNG/${card}.png`;
-            image.setAttribute("src",img);
-            domEvents.playerCard.appendChild(image);
+            var player  = new Card_Process(curr);
+            player.userHit();
         });
 
         RandnumStorage.dealerHit.map((curr)=>{
-            let image = document.createElement("IMG");
-            let curr_toInt = parseInt(curr);
-            let card = (curr_toInt*10)+ RandnumStorage.initRand[curr_toInt];
-            let img = `./src/assets/PNG/${card}.png`;
-            image.setAttribute("src",img);
-            domEvents.dealerCard.appendChild(image);
+            var dealer = new Card_Process(curr);
+            dealer.dealerHit();
         });
     },
+
     player:()=>{
                 console.log("hit is pressed");
    console.log(RandnumStorage.userHit,RandnumStorage.dealerHit);

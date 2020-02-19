@@ -1,9 +1,6 @@
 var hitstand = {
-  highLow: e => {
-    return e.target.innerHTML;
-  },
   eval: e => {
-    let targetValue = hitstand.highLow(e);
+      let targetValue = e.target.innerHTML;
     targetValue != "STAND" ? hitstand.hitPressed() : hitstand.standPressed();
   },
 
@@ -20,7 +17,7 @@ var hitstand = {
       RandnumStorage.userTotalCardValue,
       RandnumStorage.dealerTotalCardValue
     );
-      console.log(init,RandnumStorage.dealerTotalCardValue)
+      console.log(init,RandnumStorage.dealerTotalCardValue);
     init.make_move();
   }
 };
