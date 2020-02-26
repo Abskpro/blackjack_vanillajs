@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-cloak>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<link rel="stylesheet" href="./src/styles/app.css">
+<body>
+    <header>
+        <h1>BLACKJACK LIVE</h1>
+    </header>
+    <div class="casino">
+            <div class="game">
+                <div class="table" id="dealer">
+                </div>
+
+                <div class="table" id="player">
+                </div>
+            </div>
+            <div class="grid-disp">
+                <label for="dealer">Dealer</label>
+                <label for="player">Player</label>
+            </div>
+    </div>
+	</br>
+	</br>
+
+	<div class="display">
+			<div id="balance_display">
+				<label for="player money">Your Balance =></label>
+				<span id="balance" value="100000"/>100000
+			</div>
+			<div>
+                <label>Your Bet => </label>
+				<span id="bet-value"/>0
+			</div>
+	</div>
+	</br>
+	</br>
+
+    <div class="button-container">
+        <div class="table" id="money">
+            <button class="chip " id="chip-1" value="100">100</button>
+            <button class="chip " id="chip-2" value="500">500</button>
+            <button class="chip " id="chip-2" value="1000">1K</button>
+            <button class="chip " id="chip-3" value="5000">5K</button>
+            <button class="chip " id="chip-4" value="10000">10K</button>
+            <button class="chip " id="chip-5" value="50000">50K</button>
+        </div>
+        <div class="table">
+            <button class="reset ">RESET</button>
+            <button class="bet ">BET</button>
+        </div>
+    </div>
+
+	<div class="hit-stand-button" id="hit-stand">
+        	<button class="hit ">HIT</button>
+        	<button class="stand ">STAND</button>
+    </div>
+    <div class="next">
+        <button id="next-game ">Next</button>
+    </div>
+    <script src="./socket.io.js"></script>
+    <script src="./src/Data.js"></script>
+    <script src="./src/modules/Display.js"></script>
+    <script src="./src/modules/Buttons.js"></script>
+    <script src="./src/modules/Logic.js"></script>
+    <script src="./src/modules/Random.js"></script>
+    <script src="./src/index.js"></script>
+</body>
+</html>
+
