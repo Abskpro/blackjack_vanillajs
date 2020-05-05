@@ -19,7 +19,7 @@ h1{
 
 
 .casino{
-    height:500px;
+    height:auto;
     margin:0;
     padding:0;
     width:100%;
@@ -62,8 +62,8 @@ h1{
     height:auto;
     width:auto;
     display:flex;
-	flex-wrap:wrap;
-	align-content:stretch;
+    flex-wrap:wrap;
+    align-content:stretch;
     flex-direction:row;
     position:relative;
 }
@@ -88,20 +88,21 @@ button{
 }
 
 .display{
+    margin-top:10px;
+    width:auto;
     display:flex;
     list-style-type:none;
     justify-content:space-around;
     text-align:center;
-    width:auto;
-    text-align:center;
     font-size:17px;
-	font-weight:bold;
+    font-weight:bold;
 }
 
 .button-container{
+    margin-top:10px;
     display:flex;
     align-items:center;
-	justify-content:space-around;
+    justify-content:space-around;
 }
 
 #hit-stand{
